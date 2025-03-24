@@ -1,0 +1,93 @@
+.appPopupWrapper {
+  position: fixed;
+  z-index: 100;
+  background: var(--bg-secondary);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  @media(min-width:400px) {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px 16px;
+  }
+
+  @media(min-width:1024px) {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px 16px;
+  }
+}
+
+.appPopup {
+  background: var(--bg-light);
+  height: 100%;
+  padding: 32px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+
+  @media(min-width:400px) {
+    max-width: 453px;
+    border-radius: 30px;
+    min-height: 476px;
+    height: fit-content;
+    padding: 32px;
+  }
+
+  @media(min-width:400px) {
+    max-width: 552px;
+    border-radius: 30px;
+    min-height: 476px;
+    height: fit-content;
+    padding: 32px;
+  }
+}
+
+.crossButton {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+}
+
+.mainTitle {
+  margin-bottom: 16px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.infoBtn {
+  align-self: start;
+}
+
+.listNum {
+  margin-bottom: 16px;
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.result {
+  margin-bottom: 38px;
+}
+
+.resultTitle {
+  margin-bottom: 16px;
+}
+
+.resultList {
+  margin-bottom: 24px;
+  display: flex;
+  gap: 8px;
+}

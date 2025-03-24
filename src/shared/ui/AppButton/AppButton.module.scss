@@ -1,0 +1,118 @@
+.appButton {
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all linear var(--transition-delay);
+}
+
+
+
+.clear {
+  background: none;
+  border: none;
+  color: var(--accented-color);
+
+  &:hover {
+    color: var(--accented-hover-color);
+  }
+
+  &:active {
+    color: var(--accented-color);
+  }
+}
+
+.filled {
+  color: var(--text-primary-inverted);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  border: none;
+
+  background: var(--bg-gradient);
+  box-shadow: var(--box-shadow);
+
+  &:hover {
+    background: var(--accented-color);
+  }
+
+  &:active {
+    background: var(--accented-color);
+  }
+
+  &.disabled {
+    background: var(--bg-disabled);
+    box-shadow: none;
+
+    cursor: auto
+  }
+
+  &.l {
+    min-height: 56px;
+    min-width: 280px;
+  }
+
+  &.s {
+    min-height: 40px;
+    min-width: 288px;
+    font-size: var(--font-size-s);
+  }
+}
+
+.outlined {
+  color: var(--text-primary-inverted);
+  border: 1px solid var(--bg-primary);
+  background: none;
+
+  &:hover {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+
+  }
+
+  &:active {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+
+  }
+
+  &.disabled {
+    background: var(--bg-disabled);
+    box-shadow: none;
+    color: var(--text-primary-inverted);
+    border: 1px solid var(--bg-disabled);
+    cursor: auto
+  }
+
+  &.l {
+    padding: 16px 32px;
+  }
+
+  &.s {
+    padding: 8px 24px;
+    font-size: var(--font-size-s);
+  }
+}
+
+.appButtonTag {
+  transition: all linear var(--transition-delay);
+  cursor: pointer;
+  min-height: 36px;
+  min-width: 36px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 50px;
+  background: rgb(238, 240, 242);
+
+  &:hover {
+    background: rgb(223, 227, 230);
+  }
+
+  &:active {
+    color: var(--text-primary-inverted);
+    background: var(--bg-gradient);
+  }
+
+  &.isActive {
+    color: var(--text-primary-inverted);
+    background: var(--bg-gradient);
+
+  }
+}

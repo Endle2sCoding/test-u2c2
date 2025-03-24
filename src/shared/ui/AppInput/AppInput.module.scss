@@ -1,0 +1,73 @@
+.appInputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  transition: all linear var(--transition-delay);
+}
+
+.label {
+  font-weight: 500;
+  font-size: var(--font-size-s);
+  transition: all linear var(--transition-delay);
+}
+
+.rub {
+  position: absolute;
+  top: 41px;
+}
+
+.appInput {
+  padding: 8px 10px;
+  border: 1px solid rgb(223, 227, 230);
+  min-height: 40px;
+  min-width: 288px;
+  border-radius: 3px;
+  outline: none;
+  color: var(--text-primary);
+
+
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &::placeholder {
+    color: var(--bg-disabled);
+  }
+
+  &:hover {
+    border: 1px solid var(--text-primary);
+
+  }
+
+  &:focus {
+    border: 1px solid rgb(223, 227, 230);
+  }
+
+  &.disabled {
+    &::placeholder {
+      color: rgb(128, 128, 128);
+    }
+
+    border: 1px solid rgb(128, 128, 128);
+  }
+
+  &.inputError {
+    border: 1px solid rgb(234, 0, 41);
+
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+}
+
+.error {
+  transition: all linear var(--transition-delay);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  color: var(--accented-color);
+}
