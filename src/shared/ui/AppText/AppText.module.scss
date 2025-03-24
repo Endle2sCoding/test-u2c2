@@ -11,14 +11,26 @@ h4,
 h5,
 h6 {
   font-weight: 500;
+  font-family: LabGrotesque-Bold;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: var(--font-size-xl);
+  line-height: 24px;
+
+  @media(min-width:400px) {
+    font-size: var(--font-size-xxl);
+
+  }
 }
 
 h3 {
   font-size: var(--font-size-l);
+
+  @media(min-width:400px) {
+    font-size: var(--font-size-xxxl);
+
+  }
 }
 
 h4 {

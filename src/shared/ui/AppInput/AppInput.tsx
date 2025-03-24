@@ -1,4 +1,9 @@
-import { ChangeEvent, InputHTMLAttributes, useState } from "react";
+import {
+  ChangeEvent,
+  InputHTMLAttributes,
+  KeyboardEvent,
+  useState,
+} from "react";
 import s from "./AppInput.module.scss";
 interface AppInputProps extends InputHTMLAttributes<HTMLInputElement> {
   placeholder?: string;
@@ -8,6 +13,7 @@ interface AppInputProps extends InputHTMLAttributes<HTMLInputElement> {
   value: string;
   changeInput: (value: string) => void;
   autoFocus?: boolean;
+  onEnter?: () => void;
 }
 export const AppInput = ({
   placeholder = "Text",
@@ -17,9 +23,9 @@ export const AppInput = ({
   value,
   changeInput,
   autoFocus,
+  onEnter,
 }: AppInputProps) => {
   const [error, setError] = useState("");
-
   return (
     <div className={s.appInputWrapper}>
       <label
@@ -34,6 +40,11 @@ export const AppInput = ({
         autoFocus={autoFocus}
         type={type}
         value={value}
+        onKeyUp={(e: KeyboardEvent<HTMLInputElement>) => {
+          if (e.key === "Enter") {
+            onEnter?.();
+          }
+        }}
         onChange={(e: ChangeEvent<HTMLInputElement>) => {
           changeInput(
             e.currentTarget.value

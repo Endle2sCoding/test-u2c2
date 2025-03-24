@@ -22,24 +22,28 @@
   --font-size-s: 14px;
   --font-size-m: 16px;
   --font-size-l: 18px;
-  --font-size-xl: 24px;
-  --font-size-xxl: 28px;
-  --font-size-xxxl: 32px;
+  --font-size-xl: 20px;
+  --font-size-xxl: 24px;
+  --font-size-xxxl: 28px;
 
   /* Delay */
   --transition-delay: 0.3s;
 }
 
 
-/* @font-face {
-  font-family: 'rouble';
-  src: url('../fonts/rouble/rouble-webfont.eot');
-  src: url('../fonts/rouble/rouble-webfont.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/rouble/rouble-webfont.woff') format('woff'),
-    url('../fonts/rouble/rouble-webfont.ttf') format('truetype');
+@font-face {
+  font-family: "LabGrotesque-Medium";
+  src: url('./assets/LabGrotesque-Medium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-} */
+}
+
+@font-face {
+  font-family: "LabGrotesque-Bold";
+  src: url('./assets/LabGrotesque-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: bold;
+}
 
 * {
   margin: 0;
@@ -54,4 +58,5 @@ body,
   min-height: 100vh;
   font-size: var(--font-size-s);
   line-height: 24px;
+  font-family: LabGrotesque-Medium;
 }

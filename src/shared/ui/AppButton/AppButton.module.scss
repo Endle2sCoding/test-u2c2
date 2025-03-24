@@ -44,16 +44,26 @@
     cursor: auto
   }
 
-  &.l {
+  // &.l {
+  //   min-height: 56px;
+  //   min-width: 280px;
+  // }
+
+  // &.s {
+  //   min-height: 40px;
+  //   min-width: 288px;
+  //   font-size: var(--font-size-s);
+  // }
+
+  @media(min-width:400px) {
     min-height: 56px;
     min-width: 280px;
+    font-size: var(--font-size-m);
   }
 
-  &.s {
-    min-height: 40px;
-    min-width: 288px;
-    font-size: var(--font-size-s);
-  }
+  min-height: 40px;
+  min-width: 288px;
+  font-size: var(--font-size-s);
 }
 
 .outlined {
@@ -81,14 +91,21 @@
     cursor: auto
   }
 
-  &.l {
+  @media(min-width:400px) {
     padding: 16px 32px;
   }
 
-  &.s {
-    padding: 8px 24px;
-    font-size: var(--font-size-s);
-  }
+  padding: 8px 24px;
+  font-size: var(--font-size-s);
+
+  // &.l {
+  //   padding: 16px 32px;
+  // }
+
+  // &.s {
+  //   padding: 8px 24px;
+  //   font-size: var(--font-size-s);
+  // }
 }
 
 .appButtonTag {

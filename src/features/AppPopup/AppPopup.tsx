@@ -16,9 +16,7 @@ export const AppPopup = ({ onClose }: { onClose: () => void }) => {
   const [inputValue, setInputValue] = useState<string>("");
   const onSetTotal = () => {
     if (inputValue) {
-      const newInputValue = inputValue
-        .split(" ")
-        .join("");
+      const newInputValue = inputValue.split(" ").join("");
 
       if (period === PeriodEnum.MONTH) {
         const ttl = Number(newInputValue) / monthsNum;
@@ -69,6 +67,7 @@ export const AppPopup = ({ onClose }: { onClose: () => void }) => {
               чтобы вы могли лучше спланировать свои финансы.
             </AppText>
             <AppInput
+              onEnter={() => onSetTotal()}
               autoFocus
               value={inputValue}
               changeInput={(value: string) => setInputValue(value)}
